@@ -21,7 +21,9 @@ export default function RoleDataTableExample() {
 }
 
 const headers = [
-  <p key="p" style={{fontWeight: "bold"}}>Permissions</p>,
+  <p key='p' style={{fontWeight: "bold"}}>
+    Permissions
+  </p>,
   "Default_Role",
   "Admin",
   "Event_Admin",
