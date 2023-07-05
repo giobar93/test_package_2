@@ -1,7 +1,7 @@
 import InputText from "../components/InputText";
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 var meta = {
-    title: "Example/InputText",
+    title: "Components/InputText",
     component: InputText,
     tags: ["autodocs"],
     argTypes: {

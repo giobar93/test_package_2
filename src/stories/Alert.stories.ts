@@ -18,6 +18,6 @@ type Story = StoryObj<typeof meta>
 export const Show: Story = {
   args: {
     text: "Custom Text",
-    title: "Custom Title"
+    title: "Custom Title",
   },
 }

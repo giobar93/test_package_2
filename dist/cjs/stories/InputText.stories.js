@@ -5,7 +5,7 @@ var tslib_1 = require("tslib");
 var InputText_1 = tslib_1.__importDefault(require("../components/InputText"));
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 var meta = {
-    title: "Example/InputText",
+    title: "Components/InputText",
     component: InputText_1.default,
     tags: ["autodocs"],
     argTypes: {
