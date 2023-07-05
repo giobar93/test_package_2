@@ -1,0 +1,48 @@
+.default{
+    width:100%;
+    color:#133c70 !important;
+    justify-content:flex-start !important;
+  
+}
+.default:hover{
+    color:#133c70 !important
+}
+.default:focus{
+    box-shadow:0 0 0px white !important
+}
+.alert {
+    width:100% !important;
+    color:red !important;
+    justify-content:flex-start !important;
+  
+}
+.alert:hover{
+    color:red !important
+}
+.alert:focus{
+    box-shadow:0 0 0px white !important
+}
+.red {
+    width:100% !important;
+    color:red !important;
+    justify-content:flex-start !important;
+  
+}
+.red:hover{
+    color:red !important
+}
+.red:focus{
+    box-shadow:0 0 0px white !important
+}
+.green{
+    width:100% !important;
+    color:green !important;
+    justify-content:flex-start !important;
+  
+}
+.green:hover{
+    color:green !important
+}
+.green:focus{
+    box-shadow:0 0 0px white !important
+}
