@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
-  <React.StrictMode>
-    <div>
-      <h2>Default counter</h2>
-    </div>
-    <hr />
-    <div>
-      <h2>Counter with predefined value</h2>
-    </div>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <div>
+            <h2>Default counter</h2>
+        </div>
+        <hr />
+        <div>
+            <h2>Counter with predefined value</h2>
+        </div>
+    </React.StrictMode>,
 )

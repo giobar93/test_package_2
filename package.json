@@ -1,6 +1,6 @@
 {
   "name": "@giobar93/production_ui_library",
-  "version": "1.0.7",
+  "version": "1.0.13",
   "description": "",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -11,8 +11,12 @@
     "README.md"
   ],
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs",
+    "build:wp": "webpack --mode production",
+    "build": "yarn build:esm && yarn build:cjs && yarn copy-files:esm && yarn copy-files:cjs",
     "build:esm": "tsc",
+    "copy-files:esm": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.png dist/esm",
+    "copy-files:cjs": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.png dist/cjs",
+   
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "prepublishOnly": "npm run prettier && npm run lint",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
@@ -27,6 +31,7 @@
   "author": "Barbera Giovanni",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.22.6",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
@@ -40,19 +45,28 @@
     "@storybook/react": "7.0.22",
     "@storybook/react-webpack5": "7.0.22",
     "@storybook/testing-library": "0.0.14-next.2",
+    "@types/lodash": "^4.14.195",
     "@types/react": "^18.2.13",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
+    "babel-loader": "^9.1.2",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "file-loader": "^6.2.0",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^5.3.4",
-    "typescript": "^5.1.3"
+    "rimraf": "^5.0.1",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.3",
+    "typescript-plugin-css-modules": "^5.0.1",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
   },
   "peerDependencies": {
     "@mui/material": "^5.13.5",
@@ -67,9 +81,12 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/styled-engine-sc": "^5.12.0",
     "@mui/system": "^5.13.5",
+    "babel-preset-es2015": "^6.24.1",
     "i": "^0.3.7",
     "npm": "^9.7.2",
     "react-rainbow-components": "^1.32.0",
+    "rollup-plugin-import-css": "^3.3.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^7.0.22",
     "styled-components": "^5.3.11"
   }

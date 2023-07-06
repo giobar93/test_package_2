@@ -3,5 +3,5 @@ import MenuItem from "../Menu/MenuItem"
 import {faHome} from "@fortawesome/free-solid-svg-icons"
 
 export default function MenuItemExample() {
-  return <MenuItem text='Test' icon={faHome}></MenuItem>
+    return <MenuItem text='Test' icon={faHome}></MenuItem>
 }

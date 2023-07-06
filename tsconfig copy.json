@@ -1,0 +1,45 @@
+{
+  
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "outDir": "./dist/esm",
+    "paths": {
+      "assets/*": [ "./src/assets/*" ],
+    },
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "baseUrl": "src",
+
+    "checkJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.png",
+    "src/**/*.css",
+   ],
+   "exclude": [
+    "node_modules",
+    "dist",
+  ],
+ 
+}

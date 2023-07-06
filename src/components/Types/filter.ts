@@ -1,10 +1,10 @@
 export interface Filter {
-  field: string
-  value: string
+    field: string
+    value: string
 }
 
 export interface FilterOption {
-  title: string
-  field: string
-  values: string[]
+    title: string
+    field: string
+    values: string[]
 }

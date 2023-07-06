@@ -3,12 +3,12 @@ import Loader from "../components/Loader/Loader"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: "Components/Loader",
-  component: Loader,
-  tags: ["autodocs"],
-  argTypes: {
-    heigth: {control: "number"},
-  },
+    title: "Components/Loader",
+    component: Loader,
+    tags: ["autodocs"],
+    argTypes: {
+        heigth: {control: "number"},
+    },
 } satisfies Meta<typeof Loader>
 
 export default meta

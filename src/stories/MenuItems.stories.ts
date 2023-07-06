@@ -3,12 +3,12 @@ import MenuItem from "../components/Menu/MenuItem"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: "Components/MenuItem",
-  component: MenuItem,
-  tags: ["autodocs"],
-  argTypes: {
-    text: {control: "text"},
-  },
+    title: "Components/MenuItem",
+    component: MenuItem,
+    tags: ["autodocs"],
+    argTypes: {
+        text: {control: "text"},
+    },
 } satisfies Meta<typeof MenuItem>
 
 export default meta

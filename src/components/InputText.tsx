@@ -1,9 +1,9 @@
 import React from "react"
 
 type Props = {
-  text?: string
+    text?: string
 }
 
 export default function InputText({text = ""}: Props) {
-  return <p>{text}</p>
+    return <p>{text}</p>
 }
