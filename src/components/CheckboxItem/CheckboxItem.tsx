@@ -1,6 +1,7 @@
 import React, {ReactNode} from "react"
 import {ListItemAvatar, Checkbox} from "@mui/material"
 import {useEffect} from "react"
+import {colorDefault} from "../../common/layout"
 
 type Props = {
     checkBoxId?: string
@@ -54,8 +55,8 @@ export default function CheckBoxItem({
                 checked={checked}
                 sx={{
                     alignItems: "center",
-                    color: "#133c70",
-                    "&.Mui-checked": {color: defaultValue ? "#c9c9d9" : "#133c70"},
+                    color: colorDefault.blue,
+                    "&.Mui-checked": {color: defaultValue ? colorDefault.grey : colorDefault.blue},
                 }}
                 icon={icon}
                 checkedIcon={checkedIcon}

@@ -7,38 +7,7 @@ import Toolbar from "@mui/material/Toolbar"
 import Typography from "@mui/material/Typography"
 import {Stack} from "@mui/material"
 import {styled} from "@mui/material/styles"
-
-const InnerAppBarStyle = {
-    zIndex: -2,
-    flexGrow: 1,
-    color: "#133c70",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "absolute",
-    right: 0,
-    left: 0,
-}
-const toolbarStyle = {
-    background: "#e4f0ff00",
-    width: "100%",
-    height: "10vh",
-    borderBottom: "2px solid #133c70",
-}
-const drawerStyle = {
-    height: "90vh",
-    position: "relative",
-    backgroundColor: "#E4F0FF",
-    width: "0",
-    flexShrink: 0,
-    [`& .MuiDrawer-paper`]: {
-        position: "relative",
-        width: "320px",
-        boxSizing: "border-box",
-        backgroundColor: "#e4f0ff00",
-        borderRight: "2px solid #133c70",
-    },
-}
+import {drawerStyle, innerAppBarStyle, toolbarStyle} from "../../common/layout"
 
 const drawerWidth = 320
 const Main = styled("main", {shouldForwardProp: (prop) => prop !== "open"})<{
@@ -59,24 +28,6 @@ const Main = styled("main", {shouldForwardProp: (prop) => prop !== "open"})<{
         marginLeft: `${drawerWidth}px`,
     }),
 }))
-/*const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
-  ({ theme, open }:any) => ({
-    flexGrow: 1,
-    padding: theme.spacing(1),
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: 0,
-    ...(open && {
-      transition: theme.transitions.create("margin", {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: `${drawerWidth}px`,
-    }),
-  })
-);*/
 
 type Props = {
     title?: string
@@ -110,7 +61,7 @@ export default function InnerAppBar({
             <CssBaseline />
             <Toolbar sx={toolbarStyle}>
                 {head}
-                <Stack direction={"column"} sx={InnerAppBarStyle}>
+                <Stack direction={"column"} sx={innerAppBarStyle}>
                     <Typography variant='h5' component='p' sx={{fontWeight: "bold"}}>
                         {title}
                     </Typography>

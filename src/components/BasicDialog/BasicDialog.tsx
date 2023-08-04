@@ -1,17 +1,6 @@
 import React, {useEffect, useState, ReactNode} from "react"
 import {Application, Button, Modal} from "react-rainbow-components"
-
-export const rainbowThemeDefault = {
-    rainbow: {
-        palette: {
-            brand: "#133c70",
-            mainBackground: "#fffff",
-            success: "#44d7b6",
-            error: "#f14336",
-            warning: "#f7b500",
-        },
-    },
-}
+import {customModalStyle, rainbowThemeDefault} from "../../common/layout"
 
 type Props = {
     title?: string
@@ -59,13 +48,6 @@ export default function BasicDialog({
             setOpen(false)
         }
     }
-
-    const modalStyle = {
-        border: "1px solid #133c70",
-        width: "max-content",
-        maxWidth: "90%",
-        minWidth: "500px",
-    }
     var isPermissionDeny = true
     if (handlePermission) {
         isPermissionDeny = handlePermission(confirmPermission)
@@ -96,7 +78,7 @@ export default function BasicDialog({
                 title={title}
                 isOpen={open}
                 onRequestClose={innerHandleClose}
-                style={modalStyle}
+                style={customModalStyle}
                 footer={footer}
             >
                 {children}

@@ -1,5 +1,6 @@
 import React from "react"
 import {ThreeDots} from "react-loader-spinner"
+import {colorDefault} from "../../common/layout"
 
 type Props = {
     heigth?: number
@@ -8,7 +9,13 @@ type Props = {
     color?: string
     visible?: boolean
 }
-export default function Loader({heigth = 80, width = 80, radius = 9, color = "#133c70", visible = true}: Props) {
+export default function Loader({
+    heigth = 80,
+    width = 80,
+    radius = 9,
+    color = colorDefault.blue,
+    visible = true,
+}: Props) {
     return (
         <div
             style={{
